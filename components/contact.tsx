@@ -1,4 +1,5 @@
 "use client"
+
 import { useState } from "react"
 import { motion } from "framer-motion"
 import { Badge } from "@/components/ui/badge"
@@ -54,19 +55,19 @@ export default function Contact() {
     {
       icon: <Mail className="h-6 w-6 text-primary" />,
       title: "Email",
-      value: "contact@memoryleaked.dev",
-      link: "mailto:contact@memoryleaked.dev",
+      value: "sarahkhadder@gmail.com",
+      link: "mailto:sarahkhadder@gmail.com",
     },
     {
       icon: <Phone className="h-6 w-6 text-primary" />,
       title: "Phone",
-      value: "+44 (123) 456-7890",
-      link: "tel:+441234567890",
+      value: "(408) 605-7393",
+      link: "tel:+14086057393",
     },
     {
       icon: <MapPin className="h-6 w-6 text-primary" />,
       title: "Location",
-      value: "Manchester, England",
+      value: "San Jose, California",
       link: null,
     },
   ]
@@ -189,18 +190,22 @@ export default function Contact() {
                 <CardContent className="p-6">
                   <h4 className="text-lg font-semibold mb-4">Follow Me</h4>
                   <div className="flex gap-4">
-                    <Button variant="outline" size="icon" className="rounded-full" asChild>
-                      <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                    <Button variant="outline" size="icon" className="rounded-full bg-transparent" asChild>
+                      <a
+                        href="https://www.linkedin.com/in/sarah-khadder-ba1590325/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <Linkedin className="h-5 w-5" />
                       </a>
                     </Button>
-                    <Button variant="outline" size="icon" className="rounded-full" asChild>
-                      <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+                    <Button variant="outline" size="icon" className="rounded-full bg-transparent" asChild>
+                      <a href="https://x.com/ssarahhk_" target="_blank" rel="noopener noreferrer">
                         <Twitter className="h-5 w-5" />
                       </a>
                     </Button>
-                    <Button variant="outline" size="icon" className="rounded-full" asChild>
-                      <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+                    <Button variant="outline" size="icon" className="rounded-full bg-transparent" asChild>
+                      <a href="https://github.com/skhadder" target="_blank" rel="noopener noreferrer">
                         <Github className="h-5 w-5" />
                       </a>
                     </Button>

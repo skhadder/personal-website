@@ -37,21 +37,23 @@ export default function About() {
             transition={{ duration: 0.5, delay: 0.2 }}
             variants={fadeIn}
           >
-            <h3 className="text-2xl font-bold mb-4">A Passionate Developer</h3>
-            <p className="text-muted-foreground mb-6">
-              I'm a software developer with a passion for creating clean, efficient, and user-friendly applications.
-              With over 5 years of experience in the industry, I've worked on a variety of projects ranging from small
-              business websites to complex enterprise applications.
-            </p>
-            <p className="text-muted-foreground mb-6">
-              My journey in software development began when I was in college, where I discovered my love for solving
-              complex problems through code. Since then, I've been continuously learning and improving my skills to stay
-              at the forefront of technology.
-            </p>
-            <p className="text-muted-foreground">
-              When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or
-              sharing my knowledge through blog posts and community forums.
-            </p>
+            <div>
+              <h3 className="text-2xl font-bold mb-4">A Passionate Developer</h3>
+              <p className="text-muted-foreground mb-6">
+                I'm a Computer Science student at San Jose State University, currently in my third year, with a passion
+                for building clean, user-focused software. My journey in tech has fueled my curiosity, pushing me to
+                continuously learn, experiment, and expand my skill set.
+              </p>
+              <p className="text-muted-foreground mb-6">
+                I'm especially fascinated by Artificial Intelligence and its role in shaping the future of technology.
+                Whether it's front-end development, software engineering, or exploring machine learning concepts, I'm
+                committed to turning ideas into impactful, real-world solutions.
+              </p>
+              <p className="text-muted-foreground">
+                When I'm not coding, I enjoy connecting with other developers, staying up-to-date with the latest tech
+                trends, and diving deeper into AI research and innovation.
+              </p>
+            </div>
           </motion.div>
 
           <div className="grid grid-cols-1 gap-6">
