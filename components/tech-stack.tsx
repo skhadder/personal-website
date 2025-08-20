@@ -15,13 +15,10 @@ export default function TechStack() {
       title: "Programming Languages",
       description: "Core languages for systems and application development",
       skills: [
-        { name: "C++", level: 90 },
-        { name: "C", level: 85 },
-        { name: "Java", level: 88 },
-        { name: "Ruby", level: 82 },
-        { name: "Python", level: 85 },
-        { name: "TypeScript", level: 90 },
+        { name: "Java", level: 90 },
         { name: "JavaScript", level: 90 },
+        { name: "TypeScript", level: 90 },
+        { name: "Python", level: 85 },
       ],
     },
     concepts: {
@@ -34,7 +31,6 @@ export default function TechStack() {
         { name: "OOP", level: 95 },
         { name: "Design Patterns", level: 85 },
         { name: "System Design", level: 80 },
-        { name: "Multithreading", level: 85 },
       ],
     },
     frontend: {
@@ -43,11 +39,8 @@ export default function TechStack() {
       description: "Modern web development technologies",
       skills: [
         { name: "React", level: 90 },
-        { name: "Next.js", level: 85 },
-        { name: "HTML/CSS", level: 95 },
-        { name: "Tailwind CSS", level: 95 },
-        { name: "Redux", level: 85 },
-        { name: "WebGL", level: 75 },
+        { name: "Next.js", level: 90 },
+        { name: "Tailwind CSS", level: 85 },
       ],
     },
     backend: {
@@ -56,9 +49,6 @@ export default function TechStack() {
       description: "Server-side frameworks and technologies",
       skills: [
         { name: "Node.js", level: 85 },
-        { name: "Express", level: 80 },
-        { name: "Spring Boot", level: 85 },
-        { name: "Ruby on Rails", level: 80 },
       ],
     },
     database: {
@@ -66,10 +56,7 @@ export default function TechStack() {
       title: "Database Systems",
       description: "Database management and optimization",
       skills: [
-        { name: "MongoDB", level: 85 },
-        { name: "PostgreSQL", level: 80 },
-        { name: "MySQL", level: 75 },
-        { name: "Redis", level: 70 },
+        { name: "MongoDB", level: 80 },
       ],
     },
     tools: {
@@ -78,11 +65,9 @@ export default function TechStack() {
       description: "Tools and environments for development",
       skills: [
         { name: "Git", level: 90 },
-        { name: "Docker", level: 80 },
-        { name: "AWS", level: 75 },
-        { name: "Linux/Unix", level: 85 },
-        { name: "CMake", level: 80 },
         { name: "Visual Studio", level: 85 },
+        { name: "Linux/Unix", level: 80 },
+        { name: "AWS", level: 70 },
       ],
     },
   }
