@@ -47,17 +47,13 @@ export default function TechStack() {
       icon: <Server className="h-6 w-6" />,
       title: "Backend Development",
       description: "Server-side frameworks and technologies",
-      skills: [
-        { name: "Node.js", level: 85 },
-      ],
+      skills: [{ name: "Node.js", level: 85 }],
     },
     database: {
       icon: <Database className="h-6 w-6" />,
       title: "Database Systems",
       description: "Database management and optimization",
-      skills: [
-        { name: "MongoDB", level: 80 },
-      ],
+      skills: [{ name: "MongoDB", level: 80 }],
     },
     tools: {
       icon: <Wrench className="h-6 w-6" />,
@@ -146,12 +142,12 @@ export default function TechStack() {
                               <span className="font-medium">{skill.name}</span>
                               <span className="text-muted-foreground">{skill.level}%</span>
                             </div>
-                            <div className="w-full bg-muted rounded-full h-1.5">
+                            <div className="w-full bg-stone-300 rounded-full h-2 border border-stone-400">
                               <motion.div
                                 initial={{ width: 0 }}
                                 animate={{ width: `${skill.level}%` }}
                                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                                className="bg-primary h-1.5 rounded-full"
+                                className="bg-stone-600 h-2 rounded-full shadow-sm"
                               />
                             </div>
                           </motion.div>
