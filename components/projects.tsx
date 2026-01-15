@@ -8,9 +8,22 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 import { ExternalLink, Github, ChevronDown } from "lucide-react"
 
+type Project = {
+  id: number
+  title: string
+  shortDescription: string
+  description: string
+  image: string
+  tags: string[]
+  features: string[]
+  demoLink: string
+  githubLink: string
+  fullDescription: string
+}
+
 export default function Projects() {
-  const [selectedProject, setSelectedProject] = useState(null)
-  const [expandedProject, setExpandedProject] = useState(null)
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null)
+  const [expandedProject, setExpandedProject] = useState<number | null>(null)
 
   const fadeIn = {
     hidden: { opacity: 0, y: 20 },
@@ -20,23 +33,21 @@ export default function Projects() {
   const projects = [
     {
       id: 1,
-      title: "E-Commerce Platform",
-      shortDescription: "A full-featured e-commerce platform with product management.",
-      description:
-        "A full-featured e-commerce platform with product management, cart functionality, and payment processing.",
-      image: "/placeholder.svg?height=400&width=600",
-      tags: ["C++", "Qt", "SQLite", "CMake"],
+      title: "Alpha Phi Chore Generator",
+      shortDescription: "A web app built for a sorority housing director to automate weekly chore assignments with fair rotation.",
+      description: "---",
+      image: "/choremanagementthumbnail.png?height=400&width=600",
+      tags: ["Next.js", "React", "Firebase", "Typescript", "Vercel"],
       features: [
-        "Inventory management system",
-        "Real-time stock tracking",
-        "Secure payment processing",
-        "Order management dashboard",
-        "Customer analytics",
+        "Fair weekly chore distribution algorithm",
+        "Admin dashboard for managing members and chores",
+        "PDF and CSV export for weekly assignments",
+        "Automated weekly assignment generation",
+        "Seperate demo and production deployments",
       ],
-      demoLink: "#",
-      githubLink: "#",
-      fullDescription:
-        "This e-commerce platform provides businesses with a complete solution for selling products online. Built with C++ and Qt for high performance and cross-platform compatibility. Features include a responsive design, product catalog with filtering and search capabilities, shopping cart functionality, secure checkout integration, user authentication, and an admin dashboard for managing products, orders, and customers.",
+      demoLink: "https://chores-app-indol.vercel.app/director",
+      githubLink: "https://github.com/skhadder/chores-app",
+      fullDescription: "I developed a full-stack web application for my sorority housing director to streamline and automate weekly chore assignments within a large shared living environment. The system applies a fair distribution algorithm to rotate chores equitably across members while eliminating manuel coordination and scheduling errors. The application is built with Next.js and Firebase, supports PDF and CSV exports for adminstrative use, and is deployed using seperate demo and production environments on Vercel to protect live data while also allowing public demonstration.",
     },
     {
       id: 2,
