@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react"
 import { Button } from "@/components/ui/button"
-import { ArrowRight, Github, Linkedin, Twitter } from "lucide-react"
+import { ArrowRight, Github, Linkedin, Twitter, FileText } from "lucide-react"
 import { motion } from "framer-motion"
 
 export default function Hero() {
@@ -58,6 +58,16 @@ export default function Hero() {
               </Button>
               <Button size="lg" variant="outline" onClick={() => scrollToSection("contact")}>
                 Contact Me
+              </Button>
+              <Button size="lg" variant="outline" asChild>
+                <a
+                  href="https://docs.google.com/document/d/18bAf_pm8XwqEDD-2IFo0SrGpMLRSUnl1hba9pU7iCUU/edit?usp=sharing"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FileText className="mr-2 h-4 w-4" />
+                  Resume
+                </a>
               </Button>
             </div>
 

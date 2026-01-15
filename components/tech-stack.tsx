@@ -18,7 +18,8 @@ export default function TechStack() {
         { name: "Java", level: 90 },
         { name: "JavaScript", level: 90 },
         { name: "TypeScript", level: 90 },
-        { name: "Python", level: 85 },
+        { name: "C", level: 90 },
+        { name: "SQL", level: 90 },
       ],
     },
     concepts: {
@@ -53,7 +54,10 @@ export default function TechStack() {
       icon: <Database className="h-6 w-6" />,
       title: "Database Systems",
       description: "Database management and optimization",
-      skills: [{ name: "MongoDB", level: 80 }],
+      skills: [
+        { name: "MySQL", level: 90 },
+        { name: "MongoDB", level: 80 },
+      ],
     },
     tools: {
       icon: <Wrench className="h-6 w-6" />,
@@ -63,7 +67,7 @@ export default function TechStack() {
         { name: "Git", level: 90 },
         { name: "Visual Studio", level: 85 },
         { name: "Linux/Unix", level: 80 },
-        { name: "AWS", level: 70 },
+        { name: "Firebase", level: 90 },
       ],
     },
   }
