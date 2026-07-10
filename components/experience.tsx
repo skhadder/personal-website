@@ -3,58 +3,60 @@
 import { motion } from "framer-motion"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent } from "@/components/ui/card"
-import { Briefcase, MapPin } from "lucide-react"
 
 type ExperienceItem = {
   title: string
   organization: string
   location: string
   period: string
-  highlights: string[]
+  bullets: [string, string]
+  skills: string[]
 }
 
 const experiences: ExperienceItem[] = [
   {
     title: "AI/ML Fellow",
-    organization: "Cornell Tech — Break Through Tech Program",
+    organization: "Cornell Tech | Break Through Tech Program",
     location: "Remote",
     period: "Mar 2026 – Present",
-    highlights: [
-      "Selected from 4,300+ applicants to join a year-long ML fellowship focused on real-world, data-driven projects",
-      "Developing skills in Python, data analysis, and machine learning through structured training and coursework",
-      "Collaborating with peers and mentors on industry-driven projects by scoping and evaluating models",
+    bullets: [
+      "Selected from 4,300+ applicants for a year-long AI/ML fellowship focused on real-world, data-driven projects.",
+      "Building machine learning solutions through industry projects, technical coursework, and mentorship.",
     ],
+    skills: ["Python", "Machine Learning", "Pandas", "NumPy", "Model Evaluation"],
   },
   {
     title: "Engineering Consultant Ambassador",
-    organization: "Responsible Computing Club (RCC), SJSU",
+    organization: "Responsible Computing Club (RCC) | San José State University",
     location: "San Jose, CA",
     period: "May 2026 – Present",
-    highlights: [
-      "Selected to scope and deliver client-facing technical solutions from requirements through deployment",
-      "Responsible for roadmap decisions, cross-functional coordination, and launch readiness across projects",
+    bullets: [
+      "Selected to scope and deliver client-facing technical solutions from requirements through deployment.",
+      "Collaborating across teams to translate stakeholder needs into clear roadmaps, technical plans, and launch-ready solutions.",
     ],
+    skills: ["Product Strategy", "Roadmap Planning", "Stakeholder Communication", "Technical Consulting", "Agile"],
   },
   {
     title: "Teaching Assistant — CS 122: Advanced Python",
-    organization: "San Jose State University",
+    organization: "San José State University",
     location: "San Jose, CA",
     period: "Jun 2026 – Present",
-    highlights: [
-      "Evaluated advanced Python assignments and delivered structured feedback to support code quality",
-      "Strengthened technical communication by explaining complex programming concepts and debugging approaches",
+    bullets: [
+      "Evaluating advanced Python assignments and providing structured feedback to improve code quality and problem-solving.",
+      "Helping students understand debugging approaches, programming concepts, and technical best practices.",
     ],
+    skills: ["Python", "Technical Communication", "Code Review", "Debugging", "Mentorship"],
   },
   {
     title: "Financial Director | Operations & Process",
     organization: "Alpha Phi Fraternity",
     location: "San Jose, CA",
     period: "Dec 2025 – Present",
-    highlights: [
-      "Improved on-time payments by 40% by designing and implementing structured billing and tracking workflows",
-      "Managed financial operations for 100+ members by overseeing billing, collections, and policy enforcement",
-      "Standardized financial processes by improving tracking systems and ensuring consistent execution across operations",
+    bullets: [
+      "Improved on-time payments by 40% by redesigning billing, tracking, and follow-up workflows.",
+      "Standardized operational processes for 100+ members to improve consistency, accountability, and execution.",
     ],
+    skills: ["Process Improvement", "Operations", "Workflow Design", "Data Tracking", "Leadership"],
   },
 ]
 
@@ -82,7 +84,7 @@ export default function Experience() {
           <div className="w-20 h-1 bg-primary mx-auto"></div>
         </motion.div>
 
-        <div className="max-w-4xl mx-auto space-y-6">
+        <div className="max-w-4xl mx-auto space-y-4">
           {experiences.map((exp, index) => (
             <motion.div
               key={index}
@@ -92,29 +94,35 @@ export default function Experience() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               variants={fadeIn}
             >
-              <Card>
-                <CardContent className="p-6">
-                  <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-4">
-                    <div>
-                      <div className="flex items-center gap-2 mb-1">
-                        <Briefcase className="h-4 w-4 text-primary" />
-                        <h3 className="text-xl font-semibold">{exp.title}</h3>
-                      </div>
-                      <p className="text-muted-foreground font-medium">{exp.organization}</p>
-                      <div className="flex items-center gap-1 text-sm text-muted-foreground mt-1">
-                        <MapPin className="h-3 w-3" />
-                        {exp.location}
-                      </div>
-                    </div>
-                    <Badge variant="secondary" className="w-fit shrink-0">
+              <Card className="transition-shadow duration-300 hover:shadow-md">
+                <CardContent className="p-5">
+                  <div className="flex flex-wrap items-start justify-between gap-x-4 gap-y-2 mb-1">
+                    <h3 className="text-lg font-semibold leading-tight">{exp.title}</h3>
+                    <Badge variant="secondary" className="shrink-0 text-xs font-medium">
                       {exp.period}
                     </Badge>
                   </div>
-                  <ul className="list-disc list-inside text-muted-foreground space-y-2">
-                    {exp.highlights.map((highlight, i) => (
-                      <li key={i}>{highlight}</li>
+
+                  <p className="text-sm font-medium text-foreground/90 mb-0.5">{exp.organization}</p>
+                  <p className="text-xs text-muted-foreground mb-3">{exp.location}</p>
+
+                  <ul className="space-y-1.5 mb-4 pl-4 list-disc marker:text-muted-foreground/60 text-sm text-muted-foreground leading-relaxed">
+                    {exp.bullets.map((bullet, i) => (
+                      <li key={i}>{bullet}</li>
                     ))}
                   </ul>
+
+                  <div className="flex flex-wrap gap-1.5">
+                    {exp.skills.map((skill) => (
+                      <Badge
+                        key={skill}
+                        variant="outline"
+                        className="text-xs font-normal px-2 py-0.5 text-muted-foreground"
+                      >
+                        {skill}
+                      </Badge>
+                    ))}
+                  </div>
                 </CardContent>
               </Card>
             </motion.div>
