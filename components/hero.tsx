@@ -39,12 +39,12 @@ export default function Hero() {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
-            <h1 className="text-4xl md:text-6xl font-bold mb-4">
-              Hi, I'm <span className="text-primary-foreground drop-shadow-lg font-extrabold">Sarah Khadder</span>
+            <h1 className="font-serif text-4xl md:text-6xl font-bold tracking-tight mb-4 text-balance">
+              Hi, I&apos;m <span className="text-primary">Sarah Khadder</span>
             </h1>
             <h2 className="text-2xl md:text-3xl font-medium text-muted-foreground mb-6">
               <span className="text-foreground">{text}</span>
-              <span className="animate-blink">|</span>
+              <span className="animate-blink text-gold">|</span>
             </h2>
             <p className="text-lg text-muted-foreground mb-8 max-w-lg">
               Passionate about technology, driven by growth. Turning complex ideas into seamless software is what I do
@@ -98,14 +98,20 @@ export default function Hero() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="relative aspect-square max-w-md mx-auto"
+            className="relative w-full max-w-md mx-auto aspect-square"
           >
-            <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/5 rounded-full"></div>
-            <div className="absolute inset-4 bg-muted rounded-full overflow-hidden">
+            {/* soft mint glow */}
+            <div className="absolute -inset-6 bg-primary/15 rounded-full blur-3xl"></div>
+            {/* subtle gold ring */}
+            <div className="absolute inset-0 rounded-full ring-1 ring-gold/50 p-2">
+              <div className="w-full h-full rounded-full ring-1 ring-primary/20"></div>
+            </div>
+            <div className="absolute inset-3 bg-muted rounded-full overflow-hidden shadow-xl">
               <img
-                src="/placeholder.svg?height=400&width=400"
-                alt="Sarah Khadder"
+                src="/sarah-headshot.png"
+                alt="Portrait of Sarah Khadder"
                 className="w-full h-full object-cover"
+                style={{ objectPosition: "50% 28%" }}
               />
             </div>
           </motion.div>

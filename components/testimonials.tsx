@@ -90,8 +90,8 @@ export default function Testimonials() {
           <Badge variant="outline" className="mb-4">
             Testimonials
           </Badge>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Client Satisfaction</h2>
-          <div className="w-20 h-1 bg-primary mx-auto"></div>
+          <h2 className="font-serif text-3xl md:text-4xl font-bold mb-4">Client Satisfaction</h2>
+          <div className="w-24 h-px bg-gradient-to-r from-transparent via-gold to-transparent mx-auto"></div>
         </motion.div>
 
         <motion.div

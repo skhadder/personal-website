@@ -25,8 +25,8 @@ export default function About() {
           <Badge variant="outline" className="mb-4">
             About Me
           </Badge>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Who I Am</h2>
-          <div className="w-20 h-1 bg-primary mx-auto"></div>
+          <h2 className="font-serif text-3xl md:text-4xl font-bold mb-4">Who I Am</h2>
+          <div className="w-24 h-px bg-gradient-to-r from-transparent via-gold to-transparent mx-auto"></div>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
@@ -38,7 +38,7 @@ export default function About() {
             variants={fadeIn}
           >
             <div>
-              <h3 className="text-2xl font-bold mb-4">A Passionate Developer</h3>
+              <h3 className="font-serif text-2xl font-bold mb-4">A Passionate Developer</h3>
               <p className="text-muted-foreground mb-6">
                 I'm a Computer Science student at San Jose State University, currently in my third year, with a passion
                 for building clean, user-focused software. My journey in tech has fueled my curiosity, pushing me to
