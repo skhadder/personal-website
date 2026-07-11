@@ -111,7 +111,7 @@ export default function Hero() {
                 src="/sarah-headshot.png"
                 alt="Portrait of Sarah Khadder"
                 className="w-full h-full object-cover"
-                style={{ objectPosition: "50% 28%" }}
+                style={{ objectPosition: "50% 40%" }}
               />
             </div>
           </motion.div>
