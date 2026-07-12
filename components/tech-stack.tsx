@@ -96,8 +96,8 @@ export default function TechStack() {
           <Badge variant="outline" className="mb-4">
             Skills
           </Badge>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Technical & Process Skills</h2>
-          <div className="w-20 h-1 bg-primary mx-auto"></div>
+          <h2 className="font-serif text-3xl md:text-4xl font-bold mb-4">Technical & Process Skills</h2>
+          <div className="w-24 h-px bg-gradient-to-r from-transparent via-gold to-transparent mx-auto"></div>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
@@ -146,12 +146,12 @@ export default function TechStack() {
                               <span className="font-medium">{skill.name}</span>
                               <span className="text-muted-foreground">{skill.level}%</span>
                             </div>
-                            <div className="w-full bg-stone-300 rounded-full h-2 border border-stone-400">
+                            <div className="w-full bg-muted rounded-full h-2 border border-border">
                               <motion.div
                                 initial={{ width: 0 }}
                                 animate={{ width: `${skill.level}%` }}
                                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                                className="bg-stone-600 h-2 rounded-full shadow-sm"
+                                className="bg-primary h-2 rounded-full shadow-sm"
                               />
                             </div>
                           </motion.div>

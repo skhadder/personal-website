@@ -80,8 +80,8 @@ export default function Experience() {
           <Badge variant="outline" className="mb-4">
             Experience
           </Badge>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Where I've Led & Delivered</h2>
-          <div className="w-20 h-1 bg-primary mx-auto"></div>
+          <h2 className="font-serif text-3xl md:text-4xl font-bold mb-4">Where I've Led & Delivered</h2>
+          <div className="w-24 h-px bg-gradient-to-r from-transparent via-gold to-transparent mx-auto"></div>
         </motion.div>
 
         <div className="max-w-4xl mx-auto space-y-4">

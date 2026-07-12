@@ -11,7 +11,7 @@ import Navbar from "@/components/navbar"
 export const metadata: Metadata = {
   title: "Sarah Khadder | Portfolio",
   description:
-    "Portfolio of Sarah Khadder — Product & Project Manager with a technical foundation in software engineering.",
+    "Portfolio of Sarah Khadder — Computer Science student interested in product management, AI, and human-centered technology.",
 }
 
 export default function Home() {
