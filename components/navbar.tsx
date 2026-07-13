@@ -5,6 +5,9 @@ import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 
+const RESUME_URL =
+  "https://docs.google.com/document/d/18bAf_pm8XwqEDD-2IFo0SrGpMLRSUnl1hba9pU7iCUU/edit?usp=sharing"
+
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
@@ -33,9 +36,9 @@ export default function Navbar() {
   const navLinks = [
     { name: "Home", href: "home" },
     { name: "About", href: "about" },
-    { name: "Tech Stack", href: "tech-stack" },
+    { name: "Experience", href: "experience" },
     { name: "Projects", href: "projects" },
-    { name: "Testimonials", href: "testimonials" },
+    { name: "Skills", href: "skills" },
     { name: "Contact", href: "contact" },
   ]
 
@@ -61,7 +64,11 @@ export default function Navbar() {
                 {link.name}
               </button>
             ))}
-            <Button>Resume</Button>
+            <Button asChild>
+              <a href={RESUME_URL} target="_blank" rel="noopener noreferrer">
+                Resume
+              </a>
+            </Button>
           </nav>
 
           {/* Mobile Navigation Toggle */}
@@ -85,7 +92,11 @@ export default function Navbar() {
                   {link.name}
                 </button>
               ))}
-              <Button className="w-full">Resume</Button>
+              <Button className="w-full" asChild>
+                <a href={RESUME_URL} target="_blank" rel="noopener noreferrer">
+                  Resume
+                </a>
+              </Button>
             </nav>
           </div>
         </div>

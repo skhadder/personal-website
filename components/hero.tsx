@@ -1,28 +1,10 @@
 "use client"
 
-import { useEffect, useState } from "react"
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Github, Linkedin, Twitter, FileText } from "lucide-react"
 import { motion } from "framer-motion"
 
 export default function Hero() {
-  const [text, setText] = useState("")
-  const fullText = "Software Developer"
-
-  useEffect(() => {
-    let i = 0
-    const typingInterval = setInterval(() => {
-      if (i < fullText.length) {
-        setText(fullText.substring(0, i + 1))
-        i++
-      } else {
-        clearInterval(typingInterval)
-      }
-    }, 100)
-
-    return () => clearInterval(typingInterval)
-  }, [])
-
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId)
     if (element) {
@@ -42,17 +24,19 @@ export default function Hero() {
             <h1 className="font-serif text-4xl md:text-6xl font-bold tracking-tight mb-4 text-balance">
               Hi, I&apos;m <span className="text-primary">Sarah Khadder</span>
             </h1>
-            <h2 className="text-2xl md:text-3xl font-medium text-muted-foreground mb-6">
-              <span className="text-foreground">{text}</span>
-              <span className="animate-blink text-gold">|</span>
+            <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground mb-3">
+              Computer Science Student @ San José State University
             </h2>
+            <p className="text-base md:text-lg text-muted-foreground mb-6 max-w-lg">
+              Interested in Product Management, AI, and Human-Centered Technology.
+            </p>
             <p className="text-lg text-muted-foreground mb-8 max-w-lg">
-              Passionate about technology, driven by growth. Turning complex ideas into seamless software is what I do
-              best.
+              I bridge product vision and technical execution — scoping roadmaps, coordinating cross-functional teams,
+              and shipping solutions that drive measurable outcomes.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="group" onClick={() => scrollToSection("projects")}>
+              <Button size="lg" className="group" onClick={() => scrollToSection("experience")}>
                 View My Work
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Button>

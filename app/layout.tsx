@@ -9,8 +9,8 @@ const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-playfa
 
 export const metadata: Metadata = {
   title: "Sarah Khadder | Portfolio",
-  description: "Professional portfolio of Sarah Khadder - Software Developer",
-    generator: 'v0.dev'
+  description:
+    "Portfolio of Sarah Khadder — Computer Science student interested in product management, AI, and human-centered technology.",
 }
 
 export default function RootLayout({

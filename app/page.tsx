@@ -1,16 +1,17 @@
 import type { Metadata } from "next"
 import Hero from "@/components/hero"
 import About from "@/components/about"
+import Experience from "@/components/experience"
 import TechStack from "@/components/tech-stack"
 import Projects from "@/components/projects"
-import Testimonials from "@/components/testimonials"
 import Contact from "@/components/contact"
 import Footer from "@/components/footer"
 import Navbar from "@/components/navbar"
 
 export const metadata: Metadata = {
   title: "Sarah Khadder | Portfolio",
-  description: "Professional portfolio of Sarah Khadder - Software Developer",
+  description:
+    "Portfolio of Sarah Khadder — Computer Science student interested in product management, AI, and human-centered technology.",
 }
 
 export default function Home() {
@@ -20,9 +21,9 @@ export default function Home() {
       <main>
         <Hero />
         <About />
-        <TechStack />
+        <Experience />
         <Projects />
-        <Testimonials />
+        <TechStack />
         <Contact />
       </main>
       <Footer />
