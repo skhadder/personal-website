@@ -43,20 +43,15 @@ export default function About() {
               </h3>
               <p className="text-muted-foreground mb-6">
                 I'm a Computer Science student at San José State University with a growing interest in product
-                management, AI, and building technology that solves real-world problems. Through the Cornell Tech Break
-                Through Tech AI/ML Fellowship, consulting engagements, and software projects, I've developed a strong
-                interest in translating user needs into practical, impactful solutions.
-              </p>
-              <p className="text-muted-foreground mb-6">
-                I've had the opportunity to build products in environments where the stakes are real—from developing a
-                preoperative assessment tool for NorthBay Health to shipping AI-powered applications during hackathons and
-                contributing to client-facing technical projects. These experiences have shown me that I enjoy
-                understanding user problems just as much as building the technology behind the solution.
+                management, AI, and building technology that actually solves problems. As a Cornell Tech Break Through
+                Tech AI/ML Fellow (selected from over 4,300 applicants), I've spent the past year translating user
+                needs into working software, from a preoperative assessment tool built for NorthBay Health to full-stack
+                scheduling systems used by real communities.
               </p>
               <p className="text-muted-foreground">
-                I'm particularly interested in opportunities at the intersection of technology, strategy, and
-                collaboration, where I can work closely with engineers, users, and stakeholders to shape products that
-                create meaningful impact.
+                What keeps me interested is the space between the two, understanding why a feature matters as much as how
+                to build it. I like sitting close to the user problem, gathering feedback, and making the tradeoffs that
+                turn an ambiguous ask into something people actually use.
               </p>
             </div>
           </motion.div>
@@ -79,7 +74,7 @@ export default function About() {
                       <h4 className="text-xl font-semibold mb-2">Building with AI</h4>
                       <p className="text-muted-foreground">
                         Applying machine learning and modern AI tools to develop practical, user-centered solutions
-                        through the Cornell Tech Break Through Tech Fellowship and hands-on projects.
+                        through Cornell Tech's AI/ML Fellowship and hands-on projects.
                       </p>
                     </div>
                   </div>

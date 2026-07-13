@@ -34,31 +34,12 @@ export default function Projects() {
   const projects: Project[] = [
     {
       id: 1,
-      title: "Verdict",
-      role: "Product Lead — HackHayward",
-      shortDescription:
-        "Scoped and shipped an AI-driven VC memo platform in 24 hours, orchestrating 6 parallel LLM calls for market sizing.",
-      description: "AI-driven startup viability platform built at HackHayward hackathon.",
-      image: "/placeholder.svg?height=400&width=600",
-      tags: ["Next.js 15", "TypeScript", "Perplexity API", "Vercel"],
-      features: [
-        "Scoped MVP and sequenced cross-functional workstreams for 24-hour delivery",
-        "Orchestrated 6 parallel LLM calls to generate VC-style memos with market sizing in 60 seconds",
-        "Engineered 8-dimension viability scoring translating complex startup data into clear investment reports",
-      ],
-      demoLink: "#",
-      githubLink: "#",
-      fullDescription:
-        "At HackHayward, I led product scoping and delivery for Verdict — an AI-driven platform that generates VC-style investment memos. I defined the MVP scope, sequenced work across the team, and shipped within 24 hours. The platform orchestrates 6 parallel LLM calls to produce market sizing and viability analysis in under 60 seconds, with an 8-dimension scoring system that translates complex startup data into actionable investment reports.",
-    },
-    {
-      id: 2,
       title: "Preoperative Assessment Tool",
       role: "Project Lead — NorthBay Health",
       shortDescription:
         "Automated pre-op orders across 50+ protocols for a hospital processing 800+ monthly procedures.",
       description: "Clinical workflow automation tool for NorthBay Health.",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "/preoporderthumbnail.png?height=400&width=600",
       tags: ["JavaScript", "HTML", "Tailwind CSS"],
       features: [
         "Automated pre-op orders across 50+ clinical protocols",
@@ -69,6 +50,25 @@ export default function Projects() {
       githubLink: "#",
       fullDescription:
         "I led development of a preoperative assessment tool for NorthBay Health, automating pre-op orders across 50+ protocols for a hospital with 800+ monthly procedures. I gathered weekly stakeholder feedback to iteratively refine output logic and meet deployment standards, ultimately standardizing clinical workflows and reducing process variation across hospital-wide operations.",
+    },
+    {
+      id: 2,
+      title: "Verdict",
+      role: "Product Lead — HackHayward",
+      shortDescription:
+        "Scoped and shipped an AI-driven VC memo platform in 24 hours, orchestrating 6 parallel LLM calls for market sizing.",
+      description: "AI-driven startup viability platform built at HackHayward hackathon.",
+      image: "/verdictthumbnail_v2.png?height=400&width=600",
+      tags: ["Next.js 15", "TypeScript", "Perplexity API", "Vercel"],
+      features: [
+        "Scoped MVP and sequenced cross-functional workstreams for 24-hour delivery",
+        "Orchestrated 6 parallel LLM calls to generate VC-style memos with market sizing in 60 seconds",
+        "Engineered 8-dimension viability scoring translating complex startup data into clear investment reports",
+      ],
+      demoLink: "#",
+      githubLink: "#",
+      fullDescription:
+        "At HackHayward, I led product scoping and delivery for Verdict — an AI-driven platform that generates VC-style investment memos. I defined the MVP scope, sequenced work across the team, and shipped within 24 hours. The platform orchestrates 6 parallel LLM calls to produce market sizing and viability analysis in under 60 seconds, with an 8-dimension scoring system that translates complex startup data into actionable investment reports.",
     },
     {
       id: 3,
