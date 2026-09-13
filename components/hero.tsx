@@ -44,11 +44,7 @@ export default function Hero() {
                 Contact Me
               </Button>
               <Button size="lg" variant="outline" asChild>
-                <a
-                  href="https://docs.google.com/document/d/18bAf_pm8XwqEDD-2IFo0SrGpMLRSUnl1hba9pU7iCUU/edit?usp=sharing"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+                <a href="/Sarah_Khadder_Resumev1.pdf" target="_blank" rel="noopener noreferrer">
                   <FileText className="mr-2 h-4 w-4" />
                   Resume
                 </a>

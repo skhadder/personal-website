@@ -5,8 +5,7 @@ import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 
-const RESUME_URL =
-  "https://docs.google.com/document/d/18bAf_pm8XwqEDD-2IFo0SrGpMLRSUnl1hba9pU7iCUU/edit?usp=sharing"
+const RESUME_URL = "/Sarah_Khadder_Resumev1.pdf"
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
