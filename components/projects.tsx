@@ -11,6 +11,7 @@ import { ExternalLink, Github, ChevronDown } from "lucide-react"
 type Project = {
   id: number
   title: string
+  role: string
   shortDescription: string
   description: string
   image: string
@@ -30,112 +31,87 @@ export default function Projects() {
     visible: { opacity: 1, y: 0 },
   }
 
-  const projects = [
+  const projects: Project[] = [
     {
       id: 1,
-      title: "Alpha Phi Chore Generator",
-      shortDescription: "A web app built for a sorority housing director to automate weekly chore assignments with fair rotation.",
-      description: "---",
-      image: "/choremanagementthumbnail.png?height=400&width=600",
-      tags: ["Next.js", "React", "Firebase", "Typescript", "Vercel"],
+      title: "Preoperative Assessment Tool",
+      role: "Project Lead — NorthBay Health",
+      shortDescription:
+        "Automated pre-op orders across 50+ protocols for a hospital processing 800+ monthly procedures.",
+      description: "Clinical workflow automation tool for NorthBay Health.",
+      image: "/preoporderthumbnail.png?height=400&width=600",
+      tags: ["JavaScript", "HTML", "Tailwind CSS"],
       features: [
-        "Fair weekly chore distribution algorithm",
-        "Admin dashboard for managing members and chores",
-        "PDF and CSV export for weekly assignments",
-        "Automated weekly assignment generation",
-        "Seperate demo and production deployments",
+        "Automated pre-op orders across 50+ clinical protocols",
+        "Gathered weekly stakeholder feedback to iteratively refine output logic",
+        "Standardized clinical workflows and reduced process variation hospital-wide",
       ],
-      demoLink: "https://chores-app-indol.vercel.app/director",
-      githubLink: "https://github.com/skhadder/chores-app",
-      fullDescription: "I developed a full-stack web application for my sorority housing director to streamline and automate weekly chore assignments within a large shared living environment. The system applies a fair distribution algorithm to rotate chores equitably across members while eliminating manuel coordination and scheduling errors. The application is built with Next.js and Firebase, supports PDF and CSV exports for adminstrative use, and is deployed using seperate demo and production environments on Vercel to protect live data while also allowing public demonstration.",
+      demoLink: "#",
+      githubLink: "#",
+      fullDescription:
+        "I led development of a preoperative assessment tool for NorthBay Health, automating pre-op orders across 50+ protocols for a hospital with 800+ monthly procedures. I gathered weekly stakeholder feedback to iteratively refine output logic and meet deployment standards, ultimately standardizing clinical workflows and reducing process variation across hospital-wide operations.",
     },
     {
       id: 2,
-      title: "Task Management System",
-      shortDescription: "A collaborative task management application with real-time updates.",
-      description: "A collaborative task management application with real-time updates and team workspaces.",
-      image: "/placeholder.svg?height=400&width=600",
-      tags: ["Java", "Spring Boot", "React", "PostgreSQL"],
+      title: "Verdict",
+      role: "Product Lead — HackHayward",
+      shortDescription:
+        "Scoped and shipped an AI-driven VC memo platform in 24 hours, orchestrating 6 parallel LLM calls for market sizing.",
+      description: "AI-driven startup viability platform built at HackHayward hackathon.",
+      image: "/verdictthumbnail_v2.png?height=400&width=600",
+      tags: ["Next.js 15", "TypeScript", "Perplexity API", "Vercel"],
       features: [
-        "Real-time collaboration",
-        "Task dependencies",
-        "Resource allocation",
-        "Progress tracking",
-        "Team management",
+        "Scoped MVP and sequenced cross-functional workstreams for 24-hour delivery",
+        "Orchestrated 6 parallel LLM calls to generate VC-style memos with market sizing in 60 seconds",
+        "Engineered 8-dimension viability scoring translating complex startup data into clear investment reports",
       ],
       demoLink: "#",
       githubLink: "#",
       fullDescription:
-        "This task management system helps teams organize and track their work efficiently. Built with Java Spring Boot for the backend and React for the frontend, it provides robust task management capabilities. Features include task creation and assignment, due dates and reminders, progress tracking, file attachments, comments and discussions, team workspaces, and real-time updates.",
+        "At HackHayward, I led product scoping and delivery for Verdict — an AI-driven platform that generates VC-style investment memos. I defined the MVP scope, sequenced work across the team, and shipped within 24 hours. The platform orchestrates 6 parallel LLM calls to produce market sizing and viability analysis in under 60 seconds, with an 8-dimension scoring system that translates complex startup data into actionable investment reports.",
     },
     {
       id: 3,
-      title: "System Resource Monitor",
-      shortDescription: "A comprehensive system monitoring tool with real-time analytics.",
-      description: "A comprehensive system monitoring tool with real-time analytics and performance tracking.",
-      image: "/placeholder.svg?height=400&width=600",
-      tags: ["C++", "Python", "Qt", "Linux"],
+      title: "Chore Assignment System",
+      role: "Product Owner — Alpha Phi",
+      shortDescription:
+        "Reduced scheduling overhead by 95% for 51 residents; scaled to 200+ residents across multiple communities.",
+      description: "End-to-end chore management system for sorority housing operations.",
+      image: "/choremanagementthumbnail.png?height=400&width=600",
+      tags: ["Next.js", "TypeScript", "Firebase", "Vercel"],
       features: [
-        "CPU/Memory monitoring",
-        "Process management",
-        "Network analytics",
-        "Disk usage tracking",
-        "Performance alerts",
+        "Reduced scheduling overhead by 95% for 51 residents through automated fair rotation",
+        "Sequenced critical path dependencies across data, admin, and reporting for on-time delivery",
+        "Scaled system to 200+ residents across multiple communities",
       ],
-      demoLink: "#",
-      githubLink: "#",
+      demoLink: "https://chores-app-indol.vercel.app/director",
+      githubLink: "https://github.com/skhadder/chores-app",
       fullDescription:
-        "This system resource monitor provides real-time insights into system performance. Built primarily in C++ with Python for data analysis, it offers comprehensive monitoring capabilities. The application tracks CPU usage, memory consumption, network traffic, and disk operations, providing detailed analytics and alerts for system administrators.",
+        "I owned end-to-end delivery of a chore assignment system for Alpha Phi housing operations. By automating weekly chore distribution with a fair rotation algorithm, I reduced scheduling overhead by 95% for 51 residents. I sequenced critical path dependencies across data, admin, and reporting workstreams to ensure on-time delivery, then scaled the system to support 200+ residents across multiple communities.",
     },
     {
       id: 4,
-      title: "Compiler Design Project",
-      shortDescription: "A custom programming language compiler with optimization features.",
-      description: "A custom programming language compiler with advanced optimization features.",
+      title: "MindPlay",
+      role: "Project Manager",
+      shortDescription:
+        "Driving sprint-based delivery of a real-time multiplayer game with cross-team coordination.",
+      description: "Real-time multiplayer gameplay platform.",
       image: "/placeholder.svg?height=400&width=600",
-      tags: ["C", "LLVM", "Assembly", "Python"],
-      features: ["Lexical analysis", "Syntax parsing", "Code optimization", "Error handling", "Assembly generation"],
-      demoLink: "#",
-      githubLink: "#",
-      fullDescription:
-        "This compiler project implements a custom programming language with modern features and optimizations. Built using C and LLVM, it includes comprehensive error handling and code optimization capabilities. The compiler performs lexical analysis, syntax parsing, semantic analysis, and generates optimized assembly code.",
-    },
-    {
-      id: 5,
-      title: "Distributed Database System",
-      shortDescription: "A distributed database system with high availability.",
-      description: "A distributed database system with high availability and fault tolerance.",
-      image: "/placeholder.svg?height=400&width=600",
-      tags: ["C++", "Rust", "gRPC", "Redis"],
-      features: ["Data replication", "Sharding", "Fault tolerance", "Load balancing", "Transaction management"],
-      demoLink: "#",
-      githubLink: "#",
-      fullDescription:
-        "This distributed database system provides high availability and fault tolerance for large-scale applications. Built with C++ and Rust for performance, it implements advanced features such as data replication, sharding, and automatic failover. The system includes comprehensive monitoring and management tools.",
-    },
-    {
-      id: 6,
-      title: "Neural Network Framework",
-      shortDescription: "A deep learning framework optimized for performance.",
-      description: "A deep learning framework with CUDA acceleration and optimization features.",
-      image: "/placeholder.svg?height=400&width=600",
-      tags: ["C++", "CUDA", "Python", "CMake"],
+      tags: ["JavaScript", "MongoDB", "Express", "React", "Node.js", "WebSockets"],
       features: [
-        "CUDA acceleration",
-        "Automatic differentiation",
-        "Model optimization",
-        "Training pipelines",
-        "Performance profiling",
+        "Managing task assignment, iteration cycles, and cross-team coordination",
+        "Sprint-based delivery with structured iteration and milestone tracking",
+        "Real-time multiplayer gameplay using WebSockets with scalable synced updates",
       ],
       demoLink: "#",
       githubLink: "#",
       fullDescription:
-        "This neural network framework provides high-performance deep learning capabilities. Built primarily in C++ with CUDA acceleration, it offers comprehensive tools for building and training neural networks. Features include automatic differentiation, model optimization, and detailed performance profiling.",
+        "I'm driving sprint-based delivery for MindPlay, a real-time multiplayer game platform. I manage task assignment, iteration cycles, and cross-team coordination across the project. The team is building real-time multiplayer gameplay using WebSockets, structuring backend logic for scalable synced updates across players.",
     },
   ]
 
   return (
-    <section id="projects" className="py-20 bg-muted/30">
+    <section id="projects" className="py-20">
       <div className="container mx-auto px-4">
         <motion.div
           initial="hidden"
@@ -146,13 +122,13 @@ export default function Projects() {
           className="text-center mb-16"
         >
           <Badge variant="outline" className="mb-4">
-            Portfolio
+            Case Studies
           </Badge>
           <h2 className="font-serif text-3xl md:text-4xl font-bold mb-4">Featured Projects</h2>
           <div className="w-24 h-px bg-gradient-to-r from-transparent via-gold to-transparent mx-auto"></div>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {projects.map((project, index) => (
             <motion.div
               key={project.id}
@@ -176,6 +152,7 @@ export default function Projects() {
                       className="w-full aspect-video object-cover transition-transform duration-300 group-hover:scale-105"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-background/20 p-6 flex flex-col justify-end">
+                      <p className="text-xs text-primary font-medium mb-1">{project.role}</p>
                       <h3 className="text-xl font-bold mb-2">{project.title}</h3>
                       <p className="text-muted-foreground text-sm">{project.shortDescription}</p>
                     </div>
@@ -200,7 +177,7 @@ export default function Projects() {
                           </div>
 
                           <div className="space-y-2">
-                            <h4 className="font-semibold">Key Features:</h4>
+                            <h4 className="font-semibold">Key Outcomes:</h4>
                             <ul className="list-disc list-inside text-sm text-muted-foreground space-y-1">
                               {project.features.map((feature, i) => (
                                 <li key={i}>{feature}</li>
@@ -209,27 +186,31 @@ export default function Projects() {
                           </div>
 
                           <div className="flex gap-4 pt-2">
-                            <Button
-                              size="sm"
-                              variant="outline"
-                              onClick={(e) => {
-                                e.stopPropagation()
-                                window.open(project.githubLink, "_blank")
-                              }}
-                            >
-                              <Github className="h-4 w-4 mr-2" />
-                              Code
-                            </Button>
-                            <Button
-                              size="sm"
-                              onClick={(e) => {
-                                e.stopPropagation()
-                                window.open(project.demoLink, "_blank")
-                              }}
-                            >
-                              <ExternalLink className="h-4 w-4 mr-2" />
-                              Demo
-                            </Button>
+                            {project.githubLink !== "#" && (
+                              <Button
+                                size="sm"
+                                variant="outline"
+                                onClick={(e) => {
+                                  e.stopPropagation()
+                                  window.open(project.githubLink, "_blank")
+                                }}
+                              >
+                                <Github className="h-4 w-4 mr-2" />
+                                Code
+                              </Button>
+                            )}
+                            {project.demoLink !== "#" && (
+                              <Button
+                                size="sm"
+                                onClick={(e) => {
+                                  e.stopPropagation()
+                                  window.open(project.demoLink, "_blank")
+                                }}
+                              >
+                                <ExternalLink className="h-4 w-4 mr-2" />
+                                Demo
+                              </Button>
+                            )}
                             <Button
                               size="sm"
                               variant="outline"
@@ -266,6 +247,7 @@ export default function Projects() {
             <DialogHeader>
               <DialogTitle>{selectedProject.title}</DialogTitle>
               <DialogDescription>
+                <p className="text-primary font-medium mt-1">{selectedProject.role}</p>
                 <div className="flex flex-wrap gap-2 mt-2 mb-4">
                   {selectedProject.tags.map((tag, i) => (
                     <Badge key={i} variant="secondary">
@@ -283,7 +265,7 @@ export default function Projects() {
               />
               <p className="text-muted-foreground">{selectedProject.fullDescription}</p>
               <div className="space-y-4">
-                <h4 className="font-semibold">Key Features:</h4>
+                <h4 className="font-semibold">Key Outcomes:</h4>
                 <ul className="list-disc list-inside text-muted-foreground space-y-2">
                   {selectedProject.features.map((feature, i) => (
                     <li key={i}>{feature}</li>
@@ -291,18 +273,22 @@ export default function Projects() {
                 </ul>
               </div>
               <div className="flex justify-end gap-4 mt-4">
-                <Button variant="outline" asChild>
-                  <a href={selectedProject.githubLink} target="_blank" rel="noopener noreferrer">
-                    <Github className="h-4 w-4 mr-2" />
-                    View Code
-                  </a>
-                </Button>
-                <Button asChild>
-                  <a href={selectedProject.demoLink} target="_blank" rel="noopener noreferrer">
-                    <ExternalLink className="h-4 w-4 mr-2" />
-                    Live Demo
-                  </a>
-                </Button>
+                {selectedProject.githubLink !== "#" && (
+                  <Button variant="outline" asChild>
+                    <a href={selectedProject.githubLink} target="_blank" rel="noopener noreferrer">
+                      <Github className="h-4 w-4 mr-2" />
+                      View Code
+                    </a>
+                  </Button>
+                )}
+                {selectedProject.demoLink !== "#" && (
+                  <Button asChild>
+                    <a href={selectedProject.demoLink} target="_blank" rel="noopener noreferrer">
+                      <ExternalLink className="h-4 w-4 mr-2" />
+                      Live Demo
+                    </a>
+                  </Button>
+                )}
               </div>
             </div>
           </DialogContent>

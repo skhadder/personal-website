@@ -1,73 +1,53 @@
 "use client"
 
-import { useState } from "react"
-import { motion, AnimatePresence } from "framer-motion"
+import { motion } from "framer-motion"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent } from "@/components/ui/card"
-import { Code2, Layout, Server, Database, Wrench, Binary } from "lucide-react"
+import { Code2, Layout, Wrench, Kanban } from "lucide-react"
 
 export default function TechStack() {
-  const [selectedCategory, setSelectedCategory] = useState<string | null>(null)
-
   const technologies = {
     languages: {
       icon: <Code2 className="h-6 w-6" />,
-      title: "Programming Languages",
-      description: "Core languages for systems and application development",
-      skills: [
-        { name: "Java", level: 90 },
-        { name: "JavaScript", level: 90 },
-        { name: "TypeScript", level: 90 },
-        { name: "C", level: 90 },
-        { name: "SQL", level: 90 },
-      ],
+      title: "Languages",
+      description: "Programming languages for building and shipping products",
+      skills: ["Java", "JavaScript", "TypeScript", "Python", "C", "C++", "HTML", "CSS"],
     },
-    concepts: {
-      icon: <Binary className="h-6 w-6" />,
-      title: "Engineering Concepts",
-      description: "Fundamental software engineering principles",
-      skills: [
-        { name: "Data Structures", level: 95 },
-        { name: "Algorithms", level: 90 },
-        { name: "OOP", level: 95 },
-        { name: "Design Patterns", level: 85 },
-        { name: "System Design", level: 80 },
-      ],
-    },
-    frontend: {
+    frameworks: {
       icon: <Layout className="h-6 w-6" />,
-      title: "Frontend Development",
-      description: "Modern web development technologies",
-      skills: [
-        { name: "React", level: 90 },
-        { name: "Next.js", level: 90 },
-        { name: "Tailwind CSS", level: 85 },
-      ],
-    },
-    backend: {
-      icon: <Server className="h-6 w-6" />,
-      title: "Backend Development",
-      description: "Server-side frameworks and technologies",
-      skills: [{ name: "Node.js", level: 85 }],
-    },
-    database: {
-      icon: <Database className="h-6 w-6" />,
-      title: "Database Systems",
-      description: "Database management and optimization",
-      skills: [
-        { name: "MySQL", level: 90 },
-        { name: "MongoDB", level: 80 },
-      ],
+      title: "Frameworks",
+      description: "Frameworks and libraries for full-stack development",
+      skills: ["React", "Next.js", "Node.js", "FastAPI", "Tailwind CSS", "Pandas", "NumPy"],
     },
     tools: {
       icon: <Wrench className="h-6 w-6" />,
-      title: "Development Tools",
-      description: "Tools and environments for development",
+      title: "Developer Tools",
+      description: "Platforms and tools for development and deployment",
       skills: [
-        { name: "Git", level: 90 },
-        { name: "Visual Studio", level: 85 },
-        { name: "Linux/Unix", level: 80 },
-        { name: "Firebase", level: 90 },
+        "Git",
+        "GitHub",
+        "Linux",
+        "Firebase",
+        "Supabase",
+        "MongoDB",
+        "MySQL",
+        "Vercel",
+        "VS Code",
+        "Cursor",
+        "Claude Code",
+      ],
+    },
+    pm: {
+      icon: <Kanban className="h-6 w-6" />,
+      title: "PM & Process",
+      description: "Product management, delivery, and collaboration skills",
+      skills: [
+        "Agile/Scrum",
+        "JIRA",
+        "SDLC",
+        "Roadmap Planning",
+        "Stakeholder Communication",
+        "System Design (UML)",
       ],
     },
   }
@@ -83,7 +63,7 @@ export default function TechStack() {
   }
 
   return (
-    <section id="tech-stack" className="py-20">
+    <section id="skills" className="py-20">
       <div className="container mx-auto px-4">
         <motion.div
           initial="hidden"
@@ -96,11 +76,11 @@ export default function TechStack() {
           <Badge variant="outline" className="mb-4">
             Skills
           </Badge>
-          <h2 className="font-serif text-3xl md:text-4xl font-bold mb-4">Technical Expertise</h2>
+          <h2 className="font-serif text-3xl md:text-4xl font-bold mb-4">Technical & Process Skills</h2>
           <div className="w-24 h-px bg-gradient-to-r from-transparent via-gold to-transparent mx-auto"></div>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {Object.entries(technologies).map(([key, category]) => (
             <motion.div
               key={key}
@@ -110,68 +90,28 @@ export default function TechStack() {
               transition={{ duration: 0.5 }}
               variants={scaleUp}
             >
-              <Card
-                className={`h-full cursor-pointer transition-all duration-300 hover:shadow-lg ${
-                  selectedCategory === key ? "ring-2 ring-primary" : ""
-                }`}
-                onClick={() => setSelectedCategory(selectedCategory === key ? null : key)}
-              >
+              <Card className="h-full transition-all duration-300 hover:shadow-lg">
                 <CardContent className="p-6">
-                  <div className="flex items-center gap-4 mb-4">
-                    <div className="bg-primary/10 p-3 rounded-full">{category.icon}</div>
+                  <div className="flex items-center gap-4 mb-5">
+                    <div className="bg-primary/10 text-primary p-3 rounded-full">{category.icon}</div>
                     <div>
                       <h3 className="text-lg font-semibold">{category.title}</h3>
                       <p className="text-sm text-muted-foreground">{category.description}</p>
                     </div>
                   </div>
 
-                  <AnimatePresence>
-                    {selectedCategory === key && (
-                      <motion.div
-                        initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: "auto" }}
-                        exit={{ opacity: 0, height: 0 }}
-                        transition={{ duration: 0.3 }}
-                        className="space-y-4"
-                      >
-                        {category.skills.map((skill, index) => (
-                          <motion.div
-                            key={index}
-                            initial={{ opacity: 0, x: -20 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            transition={{ delay: index * 0.1 }}
-                            className="space-y-2"
-                          >
-                            <div className="flex justify-between text-sm">
-                              <span className="font-medium">{skill.name}</span>
-                              <span className="text-muted-foreground">{skill.level}%</span>
-                            </div>
-                            <div className="w-full bg-muted rounded-full h-2 border border-border">
-                              <motion.div
-                                initial={{ width: 0 }}
-                                animate={{ width: `${skill.level}%` }}
-                                transition={{ duration: 0.5, delay: index * 0.1 }}
-                                className="bg-primary h-2 rounded-full shadow-sm"
-                              />
-                            </div>
-                          </motion.div>
-                        ))}
-                      </motion.div>
+                  <div className="flex flex-wrap gap-2">
+                    {category.skills.slice(0, 4).map((skill) => (
+                      <Badge key={skill} variant="secondary" className="font-normal">
+                        {skill}
+                      </Badge>
+                    ))}
+                    {category.skills.length > 4 && (
+                      <Badge variant="secondary" className="font-normal">
+                        +{category.skills.length - 4} more
+                      </Badge>
                     )}
-                  </AnimatePresence>
-
-                  {selectedCategory !== key && (
-                    <div className="mt-4 flex flex-wrap gap-2">
-                      {category.skills.slice(0, 3).map((skill, index) => (
-                        <Badge key={index} variant="secondary">
-                          {skill.name}
-                        </Badge>
-                      ))}
-                      {category.skills.length > 3 && (
-                        <Badge variant="secondary">+{category.skills.length - 3} more</Badge>
-                      )}
-                    </div>
-                  )}
+                  </div>
                 </CardContent>
               </Card>
             </motion.div>
@@ -187,8 +127,8 @@ export default function TechStack() {
           className="mt-12 text-center text-muted-foreground"
         >
           <p className="max-w-2xl mx-auto">
-            With extensive experience in both low-level systems programming and modern web development, I bring a
-            comprehensive understanding of software engineering principles to every project.
+            I combine technical fluency with product and process skills — able to scope roadmaps, communicate with
+            stakeholders, and collaborate with engineering teams to ship solutions end to end.
           </p>
         </motion.div>
       </div>

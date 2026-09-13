@@ -3,7 +3,7 @@
 import { motion } from "framer-motion"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Code, Lightbulb, Rocket } from "lucide-react"
+import { Users, Target, Kanban } from "lucide-react"
 
 export default function About() {
   const fadeIn = {
@@ -38,20 +38,20 @@ export default function About() {
             variants={fadeIn}
           >
             <div>
-              <h3 className="font-serif text-2xl font-bold mb-4">A Passionate Developer</h3>
+              <h3 className="font-serif text-2xl font-bold mb-4">
+                Building at the Intersection of Technology, Product, and Impact
+              </h3>
               <p className="text-muted-foreground mb-6">
-                I'm a Computer Science student at San Jose State University, currently in my third year, with a passion
-                for building clean, user-focused software. My journey in tech has fueled my curiosity, pushing me to
-                continuously learn, experiment, and expand my skill set.
-              </p>
-              <p className="text-muted-foreground mb-6">
-                I'm especially fascinated by Artificial Intelligence and its role in shaping the future of technology.
-                Whether it's front-end development, software engineering, or exploring machine learning concepts, I'm
-                committed to turning ideas into impactful, real-world solutions.
+                I'm a Computer Science student at San José State University with a growing interest in product
+                management, AI, and building technology that actually solves problems. As a Cornell Tech Break Through
+                Tech AI/ML Fellow (selected from over 4,300 applicants), I've spent the past year translating user
+                needs into working software, from a preoperative assessment tool built for NorthBay Health to full-stack
+                scheduling systems used by real communities.
               </p>
               <p className="text-muted-foreground">
-                When I'm not coding, I enjoy connecting with other developers, staying up-to-date with the latest tech
-                trends, and diving deeper into AI research and innovation.
+                What keeps me interested is the space between the two, understanding why a feature matters as much as how
+                to build it. I like sitting close to the user problem, gathering feedback, and making the tradeoffs that
+                turn an ambiguous ask into something people actually use.
               </p>
             </div>
           </motion.div>
@@ -68,13 +68,13 @@ export default function About() {
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
                     <div className="bg-primary/10 p-3 rounded-full">
-                      <Code className="h-6 w-6 text-primary" />
+                      <Users className="h-6 w-6 text-primary" />
                     </div>
                     <div>
-                      <h4 className="text-xl font-semibold mb-2">Clean Code</h4>
+                      <h4 className="text-xl font-semibold mb-2">Building with AI</h4>
                       <p className="text-muted-foreground">
-                        I write maintainable, scalable, and efficient code following best practices and industry
-                        standards.
+                        Applying machine learning and modern AI tools to develop practical, user-centered solutions
+                        through Cornell Tech's AI/ML Fellowship and hands-on projects.
                       </p>
                     </div>
                   </div>
@@ -93,12 +93,13 @@ export default function About() {
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
                     <div className="bg-primary/10 p-3 rounded-full">
-                      <Lightbulb className="h-6 w-6 text-primary" />
+                      <Target className="h-6 w-6 text-primary" />
                     </div>
                     <div>
-                      <h4 className="text-xl font-semibold mb-2">Problem Solver</h4>
+                      <h4 className="text-xl font-semibold mb-2">Product Thinking</h4>
                       <p className="text-muted-foreground">
-                        I enjoy tackling complex challenges and finding elegant solutions through creative thinking.
+                        Breaking down ambiguous problems, gathering feedback, and translating user needs into thoughtful
+                        product decisions.
                       </p>
                     </div>
                   </div>
@@ -117,12 +118,13 @@ export default function About() {
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
                     <div className="bg-primary/10 p-3 rounded-full">
-                      <Rocket className="h-6 w-6 text-primary" />
+                      <Kanban className="h-6 w-6 text-primary" />
                     </div>
                     <div>
-                      <h4 className="text-xl font-semibold mb-2">Fast Learner</h4>
+                      <h4 className="text-xl font-semibold mb-2">Technical Execution</h4>
                       <p className="text-muted-foreground">
-                        I quickly adapt to new technologies and environments, constantly expanding my skill set.
+                        Building full-stack applications while collaborating across technical and non-technical teams to
+                        bring ideas from concept to deployment.
                       </p>
                     </div>
                   </div>
